@@ -1,0 +1,58 @@
+
+.outer{
+
+    width:100vw;
+    height:80vh;
+}
+
+.inner{
+
+    width:800px;
+    position:relative;
+    top:25%;
+    margin:20px auto;
+    transform:translateY(-20%);
+    box-shadow: 4px 4px 6px #3498db;
+    padding:20px 40px;
+    .heading h1{
+            font-size: 40px;
+        }
+    }
+
+    .reg{
+        margin-top:25px;
+    }
+
+    .reg form p{
+
+        >label{
+            font-size:1.5rem;
+            display:block;
+            font-weight:bold;
+            
+        }
+        >input{
+            font-size: 1.2rem;
+            width:100%;
+            padding:7px 7px;
+            margin-top:10px;
+            border-radius:5px;
+            border:2px solid rgb(244, 238, 238);
+
+        }
+        >input[type="submit"]{
+            background-color: #3498db;
+            color:white;
+            font-size:1.5rem;
+            margin-top:5px;
+
+
+        }
+
+        >textarea{
+            width:720px;
+            margin-top:10px;
+            border-radius: 5px;
+            border: 2px solid rgb(244, 238, 238);
+        }
+    }

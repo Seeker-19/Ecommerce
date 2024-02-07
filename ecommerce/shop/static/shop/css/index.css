@@ -1,0 +1,72 @@
+
+    
+
+    .col-md-3 {
+        display: inline-block;
+        margin-left: -4px;
+    }
+
+    .col-md-3 img {
+        width:
+            100%;
+        height: 200px;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        top: 34rem;
+       
+        
+    }
+    
+    
+    .carousel-indicators .active {
+        background-color: rgb(40, 40, 218);
+    }
+
+    .carousel-indicators button {
+            background-color: rgb(175, 175, 222);
+        }
+
+    #carouselExampleIndicators {
+        top: 100px;
+        left: 70px;
+        width: 90%;
+    }
+
+    .carousel-control-prev {
+        position: absolute;
+        width: 2%;
+        left: 100px;
+        top: auto;
+        bottom: auto;
+    }
+
+    .carousel-control-next {
+        position: absolute;
+        width: 2%;
+        right: 140px;
+        top: auto;
+        bottom: auto;
+    }
+
+    .carousel-control-prev-icon {
+        background-color: blue;
+        position: absolute;
+    }
+
+    .carousel-control-next-icon {
+        background-color: blue;
+        position:
+            absolute;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        position: relative;
+        top: -280px;
+    }
+
+        
+    
+    

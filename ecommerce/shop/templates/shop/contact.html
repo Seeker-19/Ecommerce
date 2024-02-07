@@ -1,0 +1,75 @@
+{% extends "shop/basic.html" %} 
+{%block title%} Contact Us {%endblock%} 
+{%load static%} 
+{%block css%} 
+<link rel="stylesheet" href="{% static "shop/css/contactus.css" %}" > 
+{%endblock%} {%block body%} 
+{% comment %} This is body of conatct us page. {% endcomment %}
+
+<div class="outer">
+  <div class="inner">
+    <header class="heading">
+      <h1>Contact Us</h1>
+    </header>
+    <div class="reg">
+      <form action="/shop/contact/" method="POST"> {% csrf_token %}
+        <p>
+          <label for="name">Full Name</label>
+          <input type="text" placeholder="Name" name="name" required />
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Email" name="email" required />
+        </p>
+        <p>
+          <label for="phone">Phone</label>
+          <input type="tel" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" required />
+        </p>
+        <p>
+          <label for="desc">Query</label>
+          <textarea  name="desc" placeholder="How We May Help You..." rows="5"  >
+
+          </textarea>
+        </p>
+
+        <p>
+          <input type="submit" id="submit" value="Contact Us" required />
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+{%endblock%}
+
+{%block js%}
+
+<script>
+  console.log("working");
+
+if (localStorage.getItem("cart") == null) {
+  var cart = {};
+} else {
+  cart = JSON.parse(localStorage.getItem("cart"));
+  
+  var sum = 0;
+  for (var item in cart) {
+    //console.log(cart)
+    // console.log(item)
+    sum += cart[item][0];
+    
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  document.getElementById("cart").innerHTML = sum;
+  
+
+
+}
+
+{% if thank %}
+alert('Thanks for contacting with us.We will get back to you soon.');
+document.location="/shop/";
+{%endif%}
+
+</script>
+{%endblock%}

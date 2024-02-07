@@ -1,0 +1,43 @@
+{% extends "shop/basic.html" %} 
+
+{%block title%}{{product.product_name}}-My
+awesome cart
+{%endblock%} 
+
+{%load static%}
+{%block css%}  
+<link rel="stylesheet" href="{% static "shop/css/prodview.css" %}" > 
+{%endblock%} 
+{%block body%} 
+
+{% comment %} {% comment
+%} This is our prodview page. 
+{% endcomment %} 
+<div class="container my-5">
+<div class="contain">
+  <div class="cont1">
+
+  
+    <img src="/media/{{product.image}}" />
+ 
+</div>
+  <div class="cont2">
+    <div class="text">
+    <h5 id="namepr{{product.id}}">{{product.product_name}}</h5>
+    <p>{{product.desc}}</p>
+    <p id="pricepr{{product.id}}">Rs.{{product.price}}</p>
+    </div>
+     <span id="dipr{{product.id}}" class="divpr my-3">
+             <button id="pr{{product.id}}" class="btn btn-primary cart">Add to Cart</button>
+     </span>
+  </div>
+
+</div>
+</div>
+
+{%endblock%}
+
+{%block js%}
+
+<script src="{%static "/shop/js/prodview.js" %}"></script>
+{%endblock%}

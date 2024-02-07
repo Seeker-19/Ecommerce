@@ -1,0 +1,39 @@
+
+.container{
+
+    height:70vh;
+    width:100vh;
+}
+
+
+.inner{
+    position:relative;
+    top:20%;
+    margin:0 auto;
+    box-shadow:4px 4px 4px grey;
+
+    >.cont{
+        padding:12px 12px;
+    }
+
+}
+.heading{
+
+    font-size:40px;
+    text-decoration: underline;
+   
+}
+.cont{
+    display:flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+
+    .imgtext{
+        width:900px;
+    }
+    >.imgtext img{
+        width:100%;
+        
+    }
+}

@@ -1,0 +1,78 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+  </head>
+  <body>
+    about us testing
+  </body>
+</html> -->
+
+{% extends "shop/basic.html" %}
+ {% load static%} 
+
+{%block title%} About
+Us{%endblock%} 
+{%block css%} 
+<link rel="stylesheet" href="{% static "shop/css/aboutus.css" %}" > 
+{%endblock%} 
+
+{%block body%} {% comment %} This is
+body of about us. {% endcomment %}
+
+<div class="container my-5">
+  <div class="inner">
+    <h1 class="heading mx-3 my-4">About Us</h1>
+    <div class="cont">
+      <div class="imgtext">
+        <img src="{% static "shop/css/awesome.png" %}" >
+      </div>
+      <div>
+        <p>Welcome to Awesome Cart.</p>
+        <p>
+          Awesome Cart excels in product presentation, offering a delightful
+          shopping journey. Each product is showcased with high-resolution
+          images and detailed descriptions, accompanied by real customer reviews
+          and ratings to guide potential buyers. The streamlined shopping cart
+          boasts a one-click option for adding items and provides real-time
+          updates on cart contents, ensuring users are always informed about
+          their purchases.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock%}
+
+{%block js%}
+
+
+<script>
+  console.log("working");
+
+if (localStorage.getItem("cart") == null) {
+  var cart = {};
+} else {
+  cart = JSON.parse(localStorage.getItem("cart"));
+  
+  var sum = 0;
+  for (var item in cart) {
+    //console.log(cart)
+    // console.log(item)
+    sum += cart[item][0];
+    
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  document.getElementById("cart").innerHTML = sum;
+  
+
+
+}
+
+</script>
+
+
+{%endblock%}
